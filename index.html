@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 인생 이야기</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <p>배경음악: Here with you</p>
+        <div class="music-controls">
+            <button id="play-pause" onclick="togglePlay()"><i class="fas fa-play"></i></button>
+            <button onclick="muteUnmute()"><i class="fas fa-volume-up" id="volume-icon"></i></button>
+        </div>
+        <div id="youtube-player" style="display: none;"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">나의 인생 이야기</div>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">나의 여정</a></li>
+                <li><a href="#healing">치유</a></li>
+                <li><a href="#videos">동영상</a></li>
+                <li><a href="#growth">성장</a></li>
+                <li><a href="#conclusion">깨달음</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>나의 인생 이야기</h1>
+            <p>어려움을 이겨내고 성장해가는 여정을 공유합니다</p>
+            <button class="cta-button">이야기 보기</button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>나의 여정</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>남들과 다른 시작</h3>
+                <p>어린 시절부터 저는 남들과 조금 다른 점이 있었습니다. 초등학교 시절 ADHD 증상이 있었고, 최근에 병원에 가서 진단을 받아보니 과거 기준으로 ADHD였다는 이야기를 들었습니다. 특히 초등학교 3학년 때 증상이 심했습니다.</p>
+                
+                <h3>불안과 긴장의 시작</h3>
+                <p>초등학교 6학년에서 중학교 1학년으로 넘어갈 때쯤, 영어학원을 다니면서 처음으로 불안감과 긴장감을 느끼기 시작했습니다. 그 시기에 성적에 집착하는 경향이 생겼고, 이 시기에 몇 가지 건강하지 않은 행동 패턴도 발생했습니다.</p>
+                
+                <h3>중학교 시절의 어려움</h3>
+                <p>중학교 3학년 때는 사회성이 많이 떨어졌고, 상황을 제대로 파악하지 못해 친구들과 갈등이 생겼습니다. 한 친구가 화를 냈을 때도 상황을 인지하지 못했고, 이후 괴롭힘을 당하게 되었습니다. 이런 경험으로 인해 불안과 긴장이 더욱 심해졌고, 사람만 봐도 떨릴 정도로 발전했습니다.</p>
+                
+                <h3>고등학교와 사회적 고립</h3>
+                <p>고등학교에 올라가서는 알고 지내던 친구들에게마저 놀림을 당했습니다. 내 감정을 표현하지 못하고, 거절하는 법을 모르는 성격 때문에 더욱 어려웠습니다. 이 시기에 SNS도 끊고 인간관계도 모두 단절했습니다. 학교가 끝나면 항상 혼자 스타크래프트라는 게임만 했고, 그 안에서 사람들과 교류했습니다.</p>
+                
+                <h3>성인기의 고립</h3>
+                <p>고등학교를 졸업하고 20살이 되어서도 집 밖에 거의 나가지 않고 게임만 했습니다. 현실 세계의 인간관계보다 게임 속 관계에 의존했습니다.</p>
+                
+                <h3>군대에서의 변화</h3>
+                <p>21살에 군대에 가면서 처음으로 낯선 사람들과 어울려야 하는 상황에 직면했습니다. 처음 2주 동안은 매일 밤 울고, 말 한마디도 제대로 하지 못했습니다. 일상적인 대화조차 어색했고, 어떻게 해야 하는지 몰랐습니다. 기본적인 생활 습관도 갖추지 못했지만, 군 생활을 하면서 좋은 사람들을 만나 조금씩 개선되기 시작했습니다.</p>
+                
+                <h3>첫 사회생활의 도전</h3>
+                <p>전역 후, 성격을 개선하기 위해 처음으로 '백소정'이라는 식당에서 홀서빙 아르바이트를 시작했습니다. 하지만 여전히 심한 불안과 긴장 때문에 "어서오세요, 백소정입니다"라는 간단한 인사조차 제대로 하지 못했습니다. 손님이 들어올 때마다 긴장하고, 주문을 받을 때면 말을 더듬거나 막히는 현상이 계속되었습니다. 이후 카페 아르바이트도 했지만, 포스기 앞에서 손님과 직접 대면해야 하는 상황에서 여전히 큰 어려움을 겪었습니다.</p>
+
+                <h3>학업으로의 회귀</h3>
+                <p>약 3개월간 여러 아르바이트를 경험한 후, 2022년 11월경에 대학교 편입을 결심하고 토익 공부에 집중하기 시작했습니다. 모든 아르바이트를 그만두고 매일 독서실에서 공부하고, 운동하고, 집에 와서 자는 루틴을 만들었습니다. 이 시기에 "대인관계가 필요 없어", "친구가 필요 없어", "내가 강해져야 해"라는 생각이 깊어졌고, 의도적으로 사람들을 만나지 않으려 했습니다.</p>
+
+                <h3>대학 생활과 사회적 불안</h3>
+                <p>대학교에 복학한 후에도 상황은 비슷했습니다. 23살에 2학년으로 복학하여 또래 학생들과의 첫 대면식에서 술자리를 갖게 되었지만, 극심한 불안과 긴장으로 말을 제대로 할 수 없었고 결국 자리를 떠났습니다. 먼저 다가와 준 친구들도 있었지만, 두려움 때문에 그들을 피했습니다. 이때 스스로에게 "이런 건 필요 없어"라고 위로하며 사회적 고립을 정당화했습니다.</p>
+
+                <h3>강박과 우울의 심화</h3>
+                <p>이 시기에 강박 증상도 나타났습니다. 근육에 집착하고 노화를 두려워하여 코큐텐과 같은 보조제를 찾아 복용했습니다. 외할아버지의 별세로 인한 스트레스와 슬픔도 겪었고, 근손실이 오자 더욱 불안해졌습니다. 항산화제가 근손실을 유발할 수 있다는 정보에 여러 병원을 방문하며 해결책을 찾아 헤맸습니다. 대학 강의실에서 혼자 공부하던 중 같은 과 학생들이 무리 지어 대화하는 모습을 보며 소외감을 강하게 느꼈고, 결국 우울증으로 발전했습니다. 혼자 밥을 먹을 때마다 눈물이 나고, 일상생활이 불가능할 정도로 상태가 악화되었습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="healing" class="healing">
+        <h2>치유의 여정</h2>
+        <div class="healing-content">
+            <div class="healing-text">
+                <h3>정신과 치료의 시작</h3>
+                <p>결국 정신병원을 찾아가겠다고 다짐하고, 인생 처음으로 정신과 약물을 복용하기 시작했습니다. 처음 처방받은 약은 SSRI 계열의 설트랄린과 함께 수면제, 기분안정제인 인데놀 등 여러 가지를 병용했습니다. 정신병원을 처음 방문했을 때, 의사 선생님을 만나자마자 눈물을 터뜨렸습니다. 상담 중에는 근육 손실에 대한 불안, 소외감, 우울증에 대한 이야기를 했습니다.</p>
+
+                <h3>약물 치료의 초기 경험</h3>
+                <p>약물을 처음 복용했을 때 일주일 동안은 식욕이 심하게 저하되고 음식을 삼키기 어려웠습니다. 이후 심장이 두근거리는 증상이 나타났지만, 동시에 이전에 느껴보지 못한 변화도 경험했습니다. 2022년 7월, 방학 중에 토익 학원을 다니면서 버스 안의 사람들이 모두 똑같은 사람으로 보이는 느낌이 들었습니다. 이전에는 대중교통에서 주변 사람들을 하나하나 의식하며 불편함과 긴장감을 느꼈지만, 그것이 점점 사라지고 사람들이 뚜렷하게 보이면서도 편안함을 느끼기 시작했습니다.</p>
+
+                <h3>조증 경험과 약물 변경</h3>
+                <p>약을 계속 복용하자 갑자기 성격이 크게 바뀌었습니다. 토익 학원에서 같은 조 사람들에게 먼저 말을 걸고, 장난도 치며 매우 활발하고 외향적인 사람으로 변했습니다. 혼자 집에 들어갈 때도 어머니와 통화하며 장난을 치고, 처음 보는 사람에게도 적극적으로 다가가 친해지려 했습니다. 밤에는 여러 사람에게 동시에 문자를 보내며 연락을 취했습니다. 또한 성기능과 관련된 부작용(사정 장애)도 경험했습니다. 병원에서는 이러한 증상이 조증으로, 위험할 수 있다고 판단했습니다. 이 시기에 충동적인 행동으로 성매매를 시도했던 적도 있습니다. 결국 약물을 NDRI 계열인 웰부트린으로 변경했고, 시간이 지나면서 조증 증상은 사라지고 우울증도 개선되기 시작했습니다.</p>
+
+                <h3>편입과 새로운 도전</h3>
+                <p>대학교 2학년은 대부분 혼자 지내며 보내면서 대학 편입을 준비했습니다. 전북대와 한밭대에 모두 합격했고, 한밭대를 선택했습니다. 한밭대에서 다시 낯선 사람들과 술자리에 참석했을 때, 불안과 긴장이 다시 심해졌습니다. 예전처럼 사람들을 완전히 피하지는 않았지만, 말을 제대로 할 수 없을 정도로 불안했습니다. 약물 용량을 늘려보았지만 큰 효과는 없었습니다.</p>
+
+                <h3>약물 변경과 금단 경험</h3>
+                <p>23살 후반이 되어 약물을 또 변경했는데, 약을 바꿀 때마다 자아가 변하는 듯한 느낌이 들어 결국 약물 복용을 중단했습니다. 하지만 금단 증상으로 불안과 충동성이 갑자기 증가했고, 3개월 후 다시 약물 복용을 시작했습니다. 25살 3월경에는 신체불안장애 치료제인 인데놀만 복용했는데, 이 약을 통해 기본적인 대화는 가능해졌지만 감정이 섞인 대화나 친밀한 관계 형성은 여전히 어려웠습니다.</p>
+
+                <h3>현재의 치유와 성장</h3>
+                <p>최근에는 봉명동의 상무초밥에서 홀서빙 아르바이트를 하고 있으며, 인데놀에 SSRI 계열인 렉사프로를 추가로 복용하고 있습니다. 렉사프로를 다시 복용하기 시작하면서 상태가 상당히 개선되었습니다. 이 약은 성기능 관련 부작용이 적고, 오히려 조루 증상 개선에 도움이 되었습니다. 약물 복용과 함께 알바를 하면서 업무 능력이 향상되고, 에너지가 생기며, 의사소통 능력도 좋아졌습니다. 이제는 친구들에게 먼저 연락하고, 대화도 자연스럽게 나누며, 오랜만에 만난 친구와도 편하게 지낼 수 있게 되었습니다.</p>
+                
+                <p>렉사프로를 복용하면서 놀라울 정도로 상태가 개선되었고, 이를 통해 깨달은 점이 있습니다. 처음에 지방 병원에서는 이전의 조증 증상 때문에 SSRI 계열 약물 사용을 완전히 금기시했습니다. 하지만 대학병원에서 렉사프로를 처방받아 복용한 결과, 오히려 상태가 크게 호전되었습니다. 이를 통해 설트랄린을 복용했을 때 경험한 조증 증상은 다른 요인들이 복합적으로 작용했을 수 있습니다. 결국 렉사프로라는 또 다른 SSRI를 복용하면서 큰 부작용 없이 증상이 개선되었다는 것은 애초부터 세로토닌 시스템을 조절하는 약물이 저에게 필요했다는 것을 시사합니다. 지방 병원에서는 조증 증상을 우려하여 SSRI 사용을 금기시했지만, 대학병원에서 렉사프로를 처방받은 것은 제 인생의 전환점이 되었습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion" class="conclusion">
+        <h2>깨달음과 결론</h2>
+        <div class="conclusion-content">
+            <div class="conclusion-text">
+                <h3>세로토닌 시스템의 중요성</h3>
+                <p>이 모든 여정을 통해 중요한 깨달음을 얻게 되었습니다. 렉사프로를 복용한 지 약 두 달이 지난 지금, 제 삶의 질이 크게 향상되었습니다. 이를 통해 저는 제가 태생적으로 세로토닌 시스템에 문제가 있었던 것이 아닐까 하는 결론에 도달했습니다. 이것이 우울증, 불안, 강박, 충동성과 같은 다양한 증상의 근본 원인이었을 가능성이 높습니다.</p>
+                
+                <p>처음 설트랄린이라는 SSRI 약물을 복용했을 때 조증 증상이 나타났지만, 지금 생각해보면 그것은 다른 요인들이 복합적으로 작용했을 수 있습니다. 결국 렉사프로라는 또 다른 SSRI를 복용하면서 큰 부작용 없이 증상이 개선되었다는 것은 애초부터 세로토닌 시스템을 조절하는 약물이 저에게 필요했다는 것을 시사합니다. 지방 병원에서는 조증 증상을 우려하여 SSRI 사용을 금기시했지만, 대학병원에서 렉사프로를 처방받은 것은 제 인생의 전환점이 되었습니다.</p>
+
+                <h3>여정의 정리</h3>
+                <p>되돌아보면, 제 인생은 다음과 같은 단계로 요약할 수 있습니다:</p>
+                <ol>
+                    <li><strong>초기 어려움</strong>: 어린 시절부터 ADHD 증상과 함께 다른 아이들과 차이를 느꼈습니다.</li>
+                    <li><strong>사회적 불안의 발달</strong>: 중학교 시절부터 불안과 긴장이 시작되어 고등학교에서는 심각한 사회적 고립으로 이어졌습니다.</li>
+                    <li><strong>사회적 고립의 심화</strong>: 20대 초반까지 가상 세계에 의존하며 현실 세계의 인간관계를 회피했습니다.</li>
+                    <li><strong>군대에서의 강제적 사회화</strong>: 군대라는 환경에서 처음으로 타인과의 상호작용을 피할 수 없는 상황을 경험했습니다.</li>
+                    <li><strong>사회 적응 시도</strong>: 아르바이트를 통해 사회에 적응하려 노력했으나 여전히 심한 불안과 긴장을 경험했습니다.</li>
+                    <li><strong>우울증과 강박의 발달</strong>: 소외감과 불안이 심화되며 결국 심각한 우울증과 강박 증상이 나타났습니다.</li>
+                    <li><strong>정신과 치료의 시작</strong>: 정신과 약물 치료를 통해 처음으로 증상의 개선을 경험했습니다.</li>
+                    <li><strong>약물 반응과 자아 변화</strong>: 약물에 따라 다양한 반응을 경험하며, 때로는 조증까지 경험했습니다.</li>
+                    <li><strong>편입과 새로운 도전</strong>: 학업에 집중하고 새로운 환경에 적응하려 노력했습니다.</li>
+                    <li><strong>현재의 안정과 성장</strong>: 적절한 약물 조합을 찾아 사회적 기능과 삶의 질이 크게 향상되었습니다.</li>
+                </ol>
+
+                <h3>의학적 통찰과 발견</h3>
+                <p>제 경험에서 가장 중요한 깨달음 중 하나는 정신 건강 문제가 단순한 의지나 성격의 문제가 아니라 신체적, 화학적 불균형에서 기인할 수 있다는 것입니다. SSRI 약물인 렉사프로가 제 상태를 크게 개선시켰다는 사실은 제 문제의 핵심이 세로토닌 시스템에 있었음을 강하게 시사합니다.</p>
+                
+                <p>처음에 설트랄린을 복용했을 때 나타난 조증 증상 때문에 SSRI 계열 약물이 금기시되었던 것은 어쩌면 잘못된 판단이었을 수 있습니다. 약물에 대한 반응은 개인마다 다를 수 있으며, 한 약물에 대한 부작용이 다른 유사한 계열의 약물에서도 동일하게 나타나는 것은 아닙니다. 대학병원에서 렉사프로를 처방받아 복용한 것은 정말 다행스러운 일이었고, 이를 통해 제 삶이 크게 개선되었습니다.</p>
+
+                <h3>앞으로의 여정</h3>
+                <p>지금의 안정된 상태를 유지하면서, 저는 계속해서 성장하고 발전할 계획입니다. 세로토닌 시스템의 문제를 인식하고 적절한 치료를 받는 것이 제 인생의 중요한 전환점이 되었습니다. 이제는 타인과의 관계를 두려워하지 않고, 보다 풍요로운 사회적 삶을 누릴 수 있게 되었습니다.</p>
+                
+                <p>제 이야기가 비슷한 어려움을 겪고 있는 다른 사람들에게 희망과 용기를 줄 수 있기를 바랍니다. 때로는 우리의 문제가 단순한 의지나 성격의 문제가 아니라, 생물학적 요인에 의한 것일 수 있으며, 적절한 도움을 구하는 것이 중요합니다. 또한 한 가지 치료법이 효과가 없거나 부작용이 있다고 해서 모든 치료를 포기하지 않고, 다양한 가능성을 시도해보는 것이 중요하다는 것을 깨달았습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="videos">
+        <h2>나의 이야기 영상</h2>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="videos/my_story.mp4" type="video/mp4">
+                    해당 브라우저는 동영상 태그를 지원하지 않습니다.
+                </video>
+                <div class="video-title">내 이야기 - 첫번째 영상</div>
+                <div class="video-description">내 인생의 힘들었던 순간들과 그것을 극복한 방법에 대한 이야기입니다.</div>
+            </div>
+            
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="videos/growth.mp4" type="video/mp4">
+                    해당 브라우저는 동영상 태그를 지원하지 않습니다.
+                </video>
+                <div class="video-title">성장의 여정</div>
+                <div class="video-description">어려움 속에서도 끊임없이 성장해온 내 모습을 담은 영상입니다.</div>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vPOT0nYBBPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-title">Here with you</div>
+                <div class="video-description">배경음악으로 사용된 곡의 원본 뮤직비디오입니다.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="growth" class="projects">
+        <h2>성장의 단계</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>자기 인식</h3>
+                <p>내 문제를 인식하고 변화의 필요성을 깨닫게 된 여정입니다.</p>
+                <a href="#" class="project-link">자세히 보기</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>첫 도전</h3>
+                <p>아르바이트와 대학 생활을 통해 사회에 첫발을 내딛은 경험입니다.</p>
+                <a href="#" class="project-link">자세히 보기</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>치유와 성장</h3>
+                <p>불안과 우울을 이겨내고 앞으로 나아가기 위한 노력입니다.</p>
+                <a href="#" class="project-link">자세히 보기</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>연락처</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">메시지</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">보내기</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 나의 인생 이야기. All rights reserved.</p>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        // YouTube API 변수
+        var player;
+        var isPlaying = false;
+        var isMuted = false;
+
+        // YouTube API가 준비되면 호출될 함수
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '0',
+                width: '0',
+                videoId: 'vPOT0nYBBPs', // Here with you 영상 ID
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'disablekb': 1,
+                    'fs': 0,
+                    'loop': 1,
+                    'playlist': 'vPOT0nYBBPs' // 반복 재생을 위해 필요
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // 플레이어가 준비되면 호출
+        function onPlayerReady(event) {
+            // 음소거 상태로 시작 (모바일 자동재생 정책 때문)
+            player.setVolume(30); // 볼륨을 30%로 설정
+        }
+
+        // 플레이어 상태가 변경될 때 호출
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                player.playVideo(); // 비디오가 끝나면 다시 재생
+            }
+        }
+
+        // 재생/일시정지 토글 함수
+        function togglePlay() {
+            var playPauseButton = document.getElementById('play-pause');
+            
+            if (isPlaying) {
+                player.pauseVideo();
+                playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
+                isPlaying = false;
+            } else {
+                player.playVideo();
+                playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+                isPlaying = true;
+            }
+        }
+
+        // 음소거/음소거해제 토글 함수
+        function muteUnmute() {
+            var volumeIcon = document.getElementById('volume-icon');
+            
+            if (isMuted) {
+                player.unMute();
+                player.setVolume(30);
+                volumeIcon.className = 'fas fa-volume-up';
+                isMuted = false;
+            } else {
+                player.mute();
+                volumeIcon.className = 'fas fa-volume-mute';
+                isMuted = true;
+            }
+        }
+
+        // 페이지 스크롤 이벤트 처리
+        document.addEventListener('DOMContentLoaded', function() {
+            // 스크롤 애니메이션
+            const sections = document.querySelectorAll('section');
+            
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY + window.innerHeight * 0.8;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+            
+            // '이야기 보기' 버튼 클릭 시 여정 섹션으로 스크롤
+            const ctaButton = document.querySelector('.cta-button');
+            const aboutSection = document.querySelector('#about');
+            
+            if (ctaButton && aboutSection) {
+                ctaButton.addEventListener('click', function() {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+            
+            // 폼 제출 처리
+            const contactForm = document.querySelector('.contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // 폼 데이터 가져오기
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // 간단한 유효성 검사
+                    if (!name || !email || !message) {
+                        alert('모든 필드를 작성해주세요.');
+                        return;
+                    }
+                    
+                    // 폼이 실제로 제출되었을 때 표시할 메시지
+                    alert('메시지가 성공적으로 전송되었습니다! 감사합니다.');
+                    
+                    // 폼 초기화
+                    contactForm.reset();
+                });
+            }
+            
+            // 현재 연도 업데이트 (푸터)
+            const yearSpan = document.createElement('span');
+            yearSpan.textContent = new Date().getFullYear();
+            const copyright = document.querySelector('footer p');
+            if (copyright) {
+                copyright.innerHTML = `&copy; ${yearSpan.textContent} 나의 인생 이야기. All rights reserved.`;
+            }
+        });
+    </script>
+</body>
+</html> 
