@@ -143,32 +143,97 @@ nav {
     gap: 30px;
 }
 
-.profile-images {
+.profile-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-decoration {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 2px dashed #5d738b;
+    top: -15px;
+    left: -15px;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #5d738b;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    border: 6px solid #5d738b;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(93, 115, 139, 0.3), rgba(44, 62, 80, 0.6));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
 }
 
 .profile-image:hover {
     transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image:hover::before {
+    opacity: 1;
 }
 
 .profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.1);
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-tagline {
+    font-size: 1.1rem;
+    color: #5d738b;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
 .about-text {
@@ -354,60 +419,6 @@ nav {
     font-weight: 400;
 }
 
-/* 연락처 섹션 스타일 */
-.contact {
-    background-color: #f0f0f0;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid #5d738b;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 400;
-    color: #5d738b;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    font-size: 1rem;
-    color: #555;
-}
-
-.submit-button {
-    background-color: #5d738b;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 400;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: block;
-    margin: 0 auto;
-    letter-spacing: 1px;
-}
-
-.submit-button:hover {
-    background-color: #4e6176;
-}
-
 /* 푸터 스타일 */
 footer {
     background-color: #2c3e50;
@@ -465,13 +476,24 @@ footer {
         flex-direction: column;
     }
     
-    .profile-images {
-        gap: 20px;
+    .profile-image {
+        width: 200px;
+        height: 200px;
     }
     
-    .profile-image {
-        width: 150px;
-        height: 150px;
+    .profile-decoration {
+        width: 230px;
+        height: 230px;
+        top: -15px;
+        left: -15px;
+    }
+    
+    .profile-name {
+        font-size: 1.5rem;
+    }
+    
+    .profile-tagline {
+        font-size: 1rem;
     }
     
     .hero h1 {
@@ -537,6 +559,116 @@ footer {
     color: #777;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+/* 자기소개 섹션 스타일 */
+.profile {
+    background-color: #eaeff4;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.profile-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.profile-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #5d738b, #2c3e50);
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.profile-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.profile-info {
+    padding: 20px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #5d738b;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.info-value {
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.certificate-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certificate-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    position: relative;
+    padding-left: 25px;
+}
+
+.certificate-list li:last-child {
+    border-bottom: none;
+}
+
+.certificate-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #5d738b;
+    font-weight: bold;
+}
+
+/* 반응형 디자인 - 자기소개 */
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-item {
+        margin-bottom: 12px;
+    }
+    
+    .info-label {
+        font-size: 0.85rem;
+    }
+    
+    .info-value {
+        font-size: 1rem;
+    }
 }
 
 /* 반응형 디자인 - 동영상 */
