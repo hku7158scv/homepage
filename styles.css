@@ -569,6 +569,107 @@ footer {
     position: relative;
 }
 
+/* 신체 변화 비교 섹션 스타일 */
+.body-comparison {
+    background-color: #f0f0f0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.comparison-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.comparison-group {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.comparison-group h3 {
+    background: linear-gradient(135deg, #5d738b, #2c3e50);
+    color: #fff;
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.comparison-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.comparison-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+.comparison-image {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.comparison-image img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.comparison-caption {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #5d738b;
+    margin-top: 10px;
+}
+
+.comparison-arrow {
+    color: #5d738b;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+.comparison-description {
+    padding: 0 20px 20px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+.comparison-description p {
+    color: #555;
+    line-height: 1.6;
+    margin: 15px 0 0;
+}
+
+/* 반응형 디자인 - 신체 변화 비교 */
+@media (max-width: 768px) {
+    .comparison-images {
+        flex-direction: column;
+    }
+    
+    .comparison-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .comparison-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+}
+
 .profile-content {
     max-width: 1200px;
     margin: 0 auto;
