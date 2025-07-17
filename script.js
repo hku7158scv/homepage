@@ -68,32 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 폼 제출 처리
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // 폼 데이터 가져오기
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // 간단한 유효성 검사
-            if (!name || !email || !message) {
-                alert('모든 필드를 작성해주세요.');
-                return;
-            }
-            
-            // 폼이 실제로 제출되었을 때 표시할 메시지
-            alert('메시지가 성공적으로 전송되었습니다! 감사합니다.');
-            
-            // 폼 초기화
-            contactForm.reset();
-        });
-    }
-    
     // 현재 연도 업데이트 (푸터)
     const yearSpan = document.createElement('span');
     yearSpan.textContent = new Date().getFullYear();
